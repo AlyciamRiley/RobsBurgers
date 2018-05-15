@@ -1,0 +1,36 @@
+/*Colors
+Dark Sea Green: #86CB92;
+Iguana Green: #71B48D;
+Purple Navy: #404e7C;
+Yankees Blue: #251F47;
+Raisin Black: #260F26
+*/
+
+html {
+    max-width: 960px;
+    padding: 15px;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    line-height: 32px;
+    font-weight: 400;
+    background :#260F26; 
+}
+
+.container-fluid {
+    max-width: 100%;
+    float: right;
+    background:#404e7C; 
+    padding-left: 225px;
+    position: relative;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+.btn-primary {
+    background-color: #251F47;
+    border: none;
+    padding: 5px;
+}

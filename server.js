@@ -1,18 +1,15 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
-var PORT = process.env.PORT || 3000;
 
+
+//express configuration
 var app = express();
-
-// Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// parse application/json
+var PORT = process.env.PORT || 3000;
+app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public')); 
+
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");

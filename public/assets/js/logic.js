@@ -1,7 +1,9 @@
 // Create new burger
 // ===============================================
-$.ajaxSettings.traditional = true;
-$("#submitBtn").on("click", function(event) {
+$(function() { 
+$("#submit").on("click", function(event) {
     event.preventDefault();
-    console.log("onclick is working")
+    console.log("onclick is working!")
+});
+
 });

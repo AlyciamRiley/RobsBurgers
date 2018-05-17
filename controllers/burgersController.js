@@ -24,6 +24,6 @@ router.post("/api/burgers", function(req, res) {
         res.json({ id: result.insertId });
    
     });
-    console.log(req.body.burger_name);
+    console.log(req.body.burger_name, req.body.devoured);
 });
 module.exports = router;

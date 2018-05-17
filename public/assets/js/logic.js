@@ -1,27 +1,23 @@
 // Create new burger
 // ===============================================
-$(function() { 
-
-$("#submit").on("click", function(event) {
-    
+$(function() {
+  $("#submit").on("click", function(event) {
     event.preventDefault();
-    
+    //Create new burger
     var newBurger = {
-        burger_name: $("#ca").val().trim(),
-        devoured: 0,
-        
+      burger_name: $("#ca")
+        .val()
+        .trim(),
+      devoured: 0
     };
 
     //Send the POST Request
     $.ajax("/api/burgers", {
-        type: "POST",
-        data: newBurger
-    }).then(
-        function() {
-            console.log("created new burger!");
-            // location.reload();
-        }
-    );
-});
-
+      type: "POST",
+      data: newBurger
+    }).then(function() {
+      console.log("created new burger!");
+      location.reload();
+    });
+  });
 });

@@ -5,13 +5,14 @@ $(function() {
     //Eat burger
     $(".change-devoured").on("click", function(event) {
       event.preventDefault();
-      console.log("onclick is working!");
       var id = $(this).data("id");
-      var newDevoured = $(this).data("newDevoured");
+      console.log("ID", id)
+      var newDevoured = $(this).data("newdevoured");
 
       var newDevouredState = {
           devoured: newDevoured
       };
+      console.log("new devoured", newDevoured)
 
     //   Send the PUT Request
       $.ajax("/api/burgers/" + id, {

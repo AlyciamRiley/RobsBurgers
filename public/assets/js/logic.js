@@ -3,7 +3,7 @@
 $(function() {
 
     //Eat burger
-    $(".change-devoured").on("click", function(event) {
+    $("#change-devoured").on("click", function(event) {
       event.preventDefault();
       var id = $(this).data("id");
       console.log("ID", id)
@@ -49,6 +49,9 @@ $(function() {
     });
   });
 
+
+  //Throw Away Burger
+  
 
 
 

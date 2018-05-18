@@ -1,9 +1,8 @@
 /*Colors
-Dark Sea Green: #86CB92;
-Iguana Green: #71B48D;
-Purple Navy: #404e7C;
-Yankees Blue: #251F47;
-Raisin Black: #260F26
+purple: ##987284;
+tan: #D0D6B5;
+Mauve: #EE7674;
+blue: #75B9BE;
 */
 
 html {
@@ -11,16 +10,18 @@ html {
     padding: 15px;
     font-family: 'Lato', sans-serif;
     font-size: 12px;
+    
     line-height: 32px;
     font-weight: 400;
-    background :#260F26; 
+    background :D0D6B5;
 }
 
 .container-fluid {
-    max-width: 100%;
     float: right;
-    background:#404e7C; 
-    padding-left: 225px;
+    color: #F9B5AC;
+    background: #987284;
+    padding: 15px !important;
+    border: 4px solid #75B9BE;
     position: relative;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -29,8 +30,20 @@ html {
 }
 
 
-.btn-primary {
-    background-color: #251F47;
+.btn {
+    background-color: #75B9BE;
+    font-size: 16px;
     border: none;
     padding: 5px;
+}
+
+#header {
+    border-bottom: 2px solid #75B9BE;
+    padding-left: 25%;
+}
+
+h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 50px;
+    
 }

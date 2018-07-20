@@ -24,30 +24,21 @@ $(function() {
   });
 
 
-  $(".change-devoured").on("click", function(event) {
-    var newDevoured = $(this).attr("data-newdevoured");
+  var newDevoured = $(".change-devoured").attr("data-newdevoured");
+  var id = $(".change-devoured").attr("data-id");
 
-    console.log("onclick is working")
-    console.log(newDevoured)
+  $(".change-devoured").on("click", function(event) {
+
+    console.log(newDevoured);
     event.preventDefault();
-    if (newDevoured === true) {
+    if (newDevoured == true) {
       eatBurger();
-      
-    }
-     else {
+    } else {
       deleteBurger();
     }
   });
 
   function eatBurger() {
-    //Eat burger
-    var id = $(".change-devoured").attr("data-id");
-    console.log("ID", id);
-
-    //check if its true or false
-
-    //
-
     var newDevouredState = {
       devoured: newDevoured
     };
@@ -59,21 +50,20 @@ $(function() {
       data: newDevouredState
     }).then(function() {
       console.log("changed devoured to ", newDevoured);
-      location.reload();
+      // location.reload();
     });
   }
 
   // Throw Away Burger
   function deleteBurger() {
-    var id = $(".change-devoured").attr("data-id");
-    // Send the DELETE request-- put in the "else" statement
-    
+
+    // Send the delete request
     $.ajax("/api/burgers/" + id, {
       type: "DELETE"
     }).then(function() {
       console.log("deleted burger!", id);
       //reload page to get the updated list
-      location.reload();
+      // location.reload();
     });
   }
 });

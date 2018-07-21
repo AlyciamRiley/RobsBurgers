@@ -21,21 +21,6 @@ h2 {
     font-family: "Gaegu";
 }
 
-#create-row {
-    width: 100%;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-align-content: center;
-    align-content: center;
-}
-
-#create-input {
-    position: relative;
-    margin-left: 25px;
-}
-
 #ca {
     padding: 5px;
 }

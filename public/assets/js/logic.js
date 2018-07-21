@@ -23,40 +23,35 @@ $(function() {
     });
   });
 
+  //Eat burger
   $(".change-devoured").on("click", function(event) {
     event.preventDefault();
     var id = $(this).data("id");
-    console.log("ID", id)
     var newDevoured = $(this).data("newdevoured");
 
     var newDevouredState = {
-        devoured: newDevoured
+      devoured: newDevoured
     };
-    console.log("new devoured", newDevoured)
 
-  //   Send the PUT Request
+    //   Send the PUT Request
     $.ajax("/api/burgers/" + id, {
-        type: "PUT",
-        data: newDevouredState
-    }).then(
-        function() {
-            console.log("changed devoured to ", newDevoured);
-            // location.reload();
-        }
-    );
-});
+      type: "PUT",
+      data: newDevouredState
+    }).then(function() {
+      location.reload();
+    });
+  });
 
 
-$(".throw-away").on("click", function(event) {
-  event.preventDefault();
-  var id = $(".throw-away").attr("data-id");
-  $.ajax("/api/burgers/" + id, {
-    type: "DELETE"
-  }).then(function() {
-    console.log("deleted burger!", id);
-    //reload page to get the updated list
-    // 
-})
-});
-
+  //Throw away burger
+  $(".throw-away").on("click", function(event) {
+    event.preventDefault();
+    var id2 = $(".throw-away").attr("data-id");
+    $.ajax("/api/burgers/" + id2, {
+      type: "DELETE"
+    }).then(function() {
+      //reload page to get the updated list
+      location.reload();
+    });
+  });
 });
